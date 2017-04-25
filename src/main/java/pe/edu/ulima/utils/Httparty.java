@@ -34,19 +34,19 @@ public class Httparty {
             
             BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
             String output;
-            
             //System.out.println("Output from Server .... \n");
-            
             while ((output = br.readLine()) != null) {
-                this.rpta = this.rpta + output;    
             	//System.out.println(output);
+                this.rpta = this.rpta + output;    
             }
             
             conn.disconnect();
         } catch (MalformedURLException e) {
             e.printStackTrace();
+            this.rpta = e.toString();
         } catch (IOException e) {
             e.printStackTrace();
+            this.rpta = e.toString();
         }
 	}
 
