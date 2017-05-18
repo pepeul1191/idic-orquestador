@@ -38,8 +38,8 @@ public class LoginHandler {
 			 array.add(token);
 			 
 			 JsonObject rptaJsonObject = new JsonObject();
-			 rptaJsonObject .addProperty("tipo_mensaje ", "success");
-			 rptaJsonObject .add("mensaje ", array);
+			 rptaJsonObject .addProperty("tipo_mensaje", "success");
+			 rptaJsonObject .add("mensaje", array);
 			 
 			 rpta = rptaJsonObject .toString();
 		 }else{
@@ -50,7 +50,7 @@ public class LoginHandler {
 			 array.add(0); 
 			 
 			 JsonObject rptaJsonObject = new JsonObject();
-			 rptaJsonObject .addProperty("tipo_mensaje ", "error");
+			 rptaJsonObject .addProperty("tipo_mensaje", "error");
 			 rptaJsonObject .add("mensaje", array);
 			 
 			 rpta = rptaJsonObject .toString();
